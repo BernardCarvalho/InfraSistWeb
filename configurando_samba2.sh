@@ -24,3 +24,4 @@ quem=$(whoami)
 sudo smbpasswd -a $quem
 
 sudo chmod -R 777 /mnt/HD
+sudo echo "chmod -R 777 /mnt/HD" > /etc/rc.local
