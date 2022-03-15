@@ -24,4 +24,11 @@ quem=$(whoami)
 sudo smbpasswd -a $quem
 
 sudo chmod -R 777 /mnt/HD
-sudo echo "chmod -R 777 /mnt/HD" > /etc/rc.local
+
+sudo echo "#!/bin/sh" > /etc/rc.local
+sudo echo "sleep 4" >>/etc/rc.local
+sudo echo "mount /dev/sdb1 /mnt/HD" >>/etc/rc.local
+sudo echo "chmod -R 777 /mnt/HD" >>/etc/rc.local
+sudo echo "exit 0" >> /etc/rc.local
+
+
