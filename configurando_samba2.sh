@@ -31,4 +31,6 @@ sudo echo "mount /dev/sdb1 /mnt/HD" >>/etc/rc.local
 sudo echo "chmod -R 777 /mnt/HD" >>/etc/rc.local
 sudo echo "exit 0" >> /etc/rc.local
 
+sudo chmod +x /etc/rc.local
+
 
